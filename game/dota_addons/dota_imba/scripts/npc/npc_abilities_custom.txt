@@ -38196,4 +38196,161 @@
             }
         }
     }    
+		
+	//=================================================================================================================
+	//	Monkey King: Boundless Strike
+	//=================================================================================================================
+	"imba_monkey_king_boundless_strike"
+	{
+		"BaseClass"													"ability_lua"
+		"ScriptFile"														"hero/hero_monkey_king"
+	
+		"AbilityBehavior"									"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"						"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"						"monkey_king_boundless_strike"
+		
+
+		"FightRecapLevel"								"1"
+		
+		"MaxLevel"													"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"								"0.4"
+		"AbilityCastRange"							"1200 1200 1200 1200 1400 1600 1800"
+		
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"								"22 22 22 22 19 16 13"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"								"100"		
+		
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"												"FIELD_FLOAT"
+				"stun_duration"								"0.8 1.1 1.4 1.7 1.8 1.9 2.0"
+			}
+			"02"
+			{
+				"var_type"												"FIELD_INTEGER"
+				"strike_crit_mult"							"150 170 190 210 215 220 225"
+				"LinkedSpecialBonus"			"special_bonus_unique_monkey_king"
+			}
+			"03"
+			{
+				"var_type"												"FIELD_INTEGER"
+				"strike_radius"								"150"
+			}
+			"04"
+			{
+				"var_type"												"FIELD_INTEGER"
+				"strike_cast_range"				"1200 1200 1200 1200 1400 1600 1800"
+			}
+			"05"
+			{
+				"var_type"												"FIELD_FLOAT"
+				"strike_buff_duration"				"3.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Monkey King: Jingu Mastery
+	//=================================================================================================================
+	"imba_monkey_king_jingu_mastery"
+	{
+		"BaseClass"													"ability_lua"
+		"ScriptFile"														"hero/hero_monkey_king"
+		
+		
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		
+		"MaxLevel"									"7"
+    "AbilityCastPoint" 				"0.2"
+		
+		"AbilityTextureName"		"monkey_king_jingu_mastery"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"required_hits"				"4 4 4 4 4 4 3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"counter_duration"			"10"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"charges"					"4 4 4 4 5 6 7"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				//"bonus_damage"				"80 110 140 170 180 190 200"
+				"bonus_damage"				"60 120 180 240 300 360 420"
+				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_2"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				//"lifesteal"					"20 40 60 80 110 150 200"
+				"lifesteal"					"20 35 50 65 80 95 120"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_duration"				"35"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_damage_stacks"				"1 1 2 2 3 3 4"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"perma_lifesteal"				"10"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Monkey King: Jingu Mastery bonus damage increase
+	//=================================================================================================================
+	"special_bonus_unique_monkey_king_2"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"				"75"
+			}
+		}
+	}
+	
+	
 }

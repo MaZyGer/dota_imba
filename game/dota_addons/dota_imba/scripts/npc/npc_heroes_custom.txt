@@ -1509,11 +1509,11 @@
 	{
 		"override_hero"				"npc_dota_hero_monkey_king"
 
-		//"Ability1"					"imba_monkey_king_boundless_strike"
+		"Ability1"					"imba_monkey_king_boundless_strike"
 		//"Ability2"					"imba_monkey_king_tree_dance"
 		//"Ability3"					"imba_monkey_king_primal_spring"
 		//"Ability4"					"imba_monkey_king_primal_spring_early"
-		//"Ability5"					"imba_monkey_king_jingu_mastery"
+		"Ability5"					"imba_monkey_king_jingu_mastery"
 		//"Ability6"					"imba_monkey_king_mischief"
 		//"Ability7"					"imba_monkey_king_untransform"
 		//"Ability8"					"imba_monkey_king_wukongs_command"
